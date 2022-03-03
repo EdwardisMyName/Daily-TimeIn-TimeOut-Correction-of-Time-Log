@@ -13,6 +13,15 @@
     top: 140px;
     padding: 15px 10px;
 }
+.modal-header{
+    background: #f7941e;
+    color: #fff;
+}
+
+#btn btn-danger{
+    position: relative;
+    
+}
 
 .timedate{
     color: black;
