@@ -1,69 +1,60 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.time, .date{
-    position: relative;
-    height: 3vh;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    position: relative;
-    left: 0px;
-    top: 140px;
-    padding: 15px 10px;
-}
-.modal-header{
-    background: #f7941e;
-    color: #fff;
-}
-
-#btn btn-danger{
-    position: relative;
-    
-}
-
-.timedate{
-    color: black;
+* {
     font-family: "Segoe UI", sans-serif;
-    padding: 15px 10px;
 }
-
-.datetime{
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.time{
-    font-size: 30px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.time span:not(:last-child){
-    position: relative;
-    margin: 0 6px;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.time span:last-child{
-    background: #2e94e3;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 10px;
-    padding: 0 5px;
-    border-radius: 3px;
-}
-
-#container{
-    position: fixed;
-    bottom: 0;
+#overlay{
     width: 100%;
-    margin: 1px;
+    height: 80%;
+    position: relative;
+}
+
+form{
+    max-width: 550px;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 17vh auto 0 auto;
+    padding: 40px;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+}
+h3{
+    margin: 0;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin: 20px 0;
+
+}
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #d3d3d3
+}
+
+.error{
+    color: red;
+
+}
+
+.error-border{
+    border-bottom: 1px solid red;
+
+}
+
+#success{
+    color: green;
+
+}
+.navbar{
+    position: sticky;
+    top:0;
+    z-index: 100;
+    
 }
