@@ -1,149 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <title>DTR</title>
-    <link rel="stylesheet" href="Time in and out CSS.css">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-              </svg>
-              Daily Time Record
-            <i class="bi bi-clock"></i>
-          </a>
-          <a class="navbar-brand">Dearjohn Services Inc.<img style="max-width:80px; margin-top: -10px;"
-            src="Johnservices.png">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
-        </div>
-    </nav>
-    
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="BTR.css">
+            <nav class="navbar navbar-dark bg-dark py-3">
+        <span class="navbar-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            </svg>
+            Back to Work Request
+            <i class="bi bi-envelope"></i>
+        </span>
+            <a class="navbar-brand">Dearjohn Services Inc.<img style="max-width:80px; margin-top: -10px;"
+                src="Johnservices.png">
+            </a>
+</nav>
 </head>
 
-<body onload="initClock()">
-<!--digital clock start-->
-    <div class="datetime">
-      <div class="date">
-        <span id="dayname">Day</span>,  
-        <span id="Month">Month</span> 
-        <span id="daynum">00</span>, 
-        <span id="year">Year</span>          
-        </div>
-    </div>  
-  <div class="timedate">
-      <div class="time" >
-        <span id="hour">00</span>:
-        <span id="minutes">00</span>:
-        <span id="seconds">00</span>
-        <span id="period">AM</span>  
-        </div>
-  </div>
-      <!--digital clock end-->
-      <div align="center" style="position: relative; top: 150px;">
-        <button type="button" class="btn btn-primary btn-lg">Time In<svg xmlns="http://www.w3.org/2000/svg" width="35" height="20" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-          <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-        </svg></button>
-        <button type="button" class="btn btn-secondary btn-lg">Time Out<svg xmlns="http://www.w3.org/2000/svg" width="35" height="20" fill="currentColor" class="bi bi-person-dash-fill" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M11 7.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
-          <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-        </svg></button>
-    </div>
-  </div>
-      <script type="text/javascript">
-        function updateClock(){
-          var now = new Date();
-          var dname = now.getDay(),
-              mo = now.getMonth(),
-              dnum = now.getDate(),
-              yr = now.getFullYear(),
-              hou = now.getHours(),
-              min = now.getMinutes(),
-              sec = now.getSeconds(),
-              pe = "AM";
+
+<body>
     
-              if(hou >= 12){
-                pe = "PM";
-              }
-              if(hou == 0){
-                hou = 12;
-              }
-              if(hou > 12){
-                hou = hou - 12;
-              }
     
-              Number.prototype.pad = function(digits){
-                for(var n = this.toString(); n.length < digits; n = 0 + n);
-                return n;
-              }
 
-          var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-          var ids = ["dayname", "Month", "daynum", "year", "hour", "minutes", "seconds", "period"];
-          var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
-          for(var i = 0; i < ids.length; i++)
-          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+   <div id="overlay">
+       <form onsubmit="event.preventDefault(); validateForm()" aria-required="false">
+           <h3>Back to Work Request Form</h3>
+           <label for="name">Name:</label>
+           <input type="text" id="name" placeholder="Your Name" required>
+           <small class="error"></small>
+           
+    
+           <label for="employeeId">Employee ID:</label>
+           <input type="text" id="employeeId" placeholder="Your Employee ID" required>
+           <small class="error"></small>
 
-        }
 
-        function initClock(){
-          updateClock();
-          window.setInterval("updateClock()", 1);
+           <label for="date">Date of Absent:</label>
+            <input type="date" id="datepicker" class="form-control" required>
+            <small class="error"></small>
 
-        }
-      </script>
-      
-       <div align="center" style="position: relative; top: 160px;">
-        <button class="btn btn-info btn-md" type="button" data-bs-toggle="modal" data-bs-target="#mymodal">Correction for Time log</button>
-       </div>
-        <div class="modal fade" id="mymodal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Correction for Time In & Time Out</h4>
-                        <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="name">Name:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                 <label for="time">Correct Time</label><br>
-                                 <input type="time" id="appt" name="appt" min="8:00" max="17:00">
-                            </div>
-                            <div class="mb-3">
-                                 <label for="date">Date:</label>
-                                 <input type="date" id="datepicker" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                 <label for="Time Log">Correct Time Log:</label>
-                                 <input type="Time Log" class="form-control">
-                                
-                           </div>
-                            <div class="mb-3">
-                                <label for="reason">Reason:</label>
-                                <input type="text" class="form-control"><br>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="DTR.js"></script>
+            
+            <div class="form-check" >
+                <label for="date">Reason for Request:</label>
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Less than three(3) hours notification of absent to Supervisor before scheduled shift
+                </label>
+              </div>
+              <div class="form-check" ">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                <label class="form-check-label" for="flexCheckChecked" >
+                    Unauthorized or Unapproved absent with Supervisor's approval
+                </label>
+              </div>
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                <label class="form-check-label" for="flexCheckChecked" >
+                    Two(2) consecutive days of absent with Supervisor's approval
+                </label>
+              </div>
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                <label class="form-check-label" for="flexCheckChecked" >
+                    Three(3) consecutive days of absent with Supervisor's approval
+                </label>
+              </div>
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                <label class="form-check-label" for="flexCheckChecked" >
+                    Other's please Specify
+                    <input type="text" class="form-control">
+                </label>
+              </div>
+           
+
+           <div class="center"></div>
+           <input type="submit" value="Submit">
+           <p id="success"></p>
+       </form>
+   </div>
+
+    <script src="BTR.js"></script>
     <script>
         $( function(){
             $( "#datepicker" ).datepicker();
         });
     </script>
-  </body>
+
+</body>
 </html>
