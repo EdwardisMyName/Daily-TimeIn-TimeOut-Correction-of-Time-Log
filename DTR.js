@@ -1,6 +1,44 @@
+const nameInput = document.querySelector("#name");
+const employeeId = document.querySelector("#employeeId");
+const Time = document.querySelector("#Time");
+const Date = document.querySelector("#date");
+const reasons = document.querySelector("#reasons");
+const success = document.querySelector("#success");
+const errorNodes = document.querySelectorAll(".error");
 
-<form id="myForm" action="/action_page.php">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br><br>
-  <input type="button" onclick="myFunction()" value="Submit form">
-</form>
+function validateForm(){
+
+    clearMessages();
+
+    if(nameInput.value.length < 1){
+        errorNodes[0].innerText = "Name cannot be blank";
+        nameInput.classList.add("error-border");
+    }
+
+    if(employeeId.value.length < 1){
+        errorNodes[1].innerText = "Name cannot be blank";
+        employeeId.classList.add("error-border");
+    }
+
+    
+
+    if(reasons.value.length < 1){
+        errorNodes[3].innerText = "Required to fill out";
+        reasons.classList.add("error-border");
+    }
+   
+}
+
+function clearMessages(){
+    for(let i = 0; i < errorNodes.length; i++){
+        errorNodes[i].innerText ="";
+
+
+    }
+    nameInput.classList.remove("error-border")
+    employeeId.classList.remove("error-border")
+    date.classList.remove("error-border")
+    reasons.classList.remove("error-border")
+
+}
+
